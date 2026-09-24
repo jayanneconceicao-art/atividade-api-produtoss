@@ -1,17 +1,17 @@
 const express = require("express");
 const cors = require("cors");
-
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
+
 app.get("/", (req, res) => {
-  res.json({
+  res.json([{
     nome: "Celular",
     preco: 1800,
     categoria: "Eletrônicos"
-  });
+  }]);
 });
 
 app.listen(3000, () => {
